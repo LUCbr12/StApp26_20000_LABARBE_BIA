@@ -1,0 +1,4 @@
+{
+  "sample_seed": 42,
+  "note": "Seed used only by utils/sample.py (synthetic offline test data). The real pipeline is deterministic and uses no sampling."
+}
