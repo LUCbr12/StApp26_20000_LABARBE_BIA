@@ -7,6 +7,8 @@ An interactive Streamlit app that tells how the **electricity mix, carbon intens
 self-sufficiency differ across French regions** (2013 → present), using the public
 éCO2mix regional data published by RTE.
 
+**Live app:** <https://efrei-eco2mix.streamlit.app> · **Code:** <https://github.com/LUCbr12/StApp26_20000_LABARBE_BIA> · **Demo video:** <https://youtu.be/ecqtkjvG8gA>
+
 Narrative: **Hook → Context → Overview (KPIs, trends) → Deep dives (map, ranking, small multiples,
 distribution, seasonality) → What-if → Data quality → Insights & next steps.**
 
@@ -78,7 +80,8 @@ seeds.json             # seed for the synthetic sample (real pipeline is determi
 - **Daily energy** = mean power over *valid* half-hours × 24 h (robust to missing rows and to duplicated rows).
 - **Blank production** (e.g. no reactors in a region) → 0 MWh; negative production clipped to 0.
 - **CO₂ intensity** uses fixed life-cycle factors (g/kWh): nuclear 6, wind 12, solar 30, hydro 6, bioenergy 230,
-  thermal 450 (editable). It describes **local production**, not the electricity consumed in the region.
+  thermal 450 (editable in the sidebar). These are **my own round-number assumptions in the range of published
+  life-cycle figures (IPCC / ADEME), not values taken from a specific table**; the thermal fleet split is not in the data. It describes **local production**, not the electricity consumed in the region.
 - **What-if** scales historical output linearly; demand unchanged; no storage, curtailment or grid limits; not a forecast.
 
 ## Limitations
